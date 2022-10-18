@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	char *s;
 	int len = 0;
 	unsigned int uint_val;
-	const void *ptr;
+	/*const void *ptr;*/
 
 	va_list argList;
 	va_start(argList, format);
