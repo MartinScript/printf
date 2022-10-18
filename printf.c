@@ -42,9 +42,9 @@ int _printf(const char *format, ...)
 			{
 				i = -i;
 				_putchar('-');
+				len++;
 			}
-			_puts(int2str(i));
-			++len;
+			len = len + _puts(int2str(i));
 			break;
 
 		case '%':
@@ -55,42 +55,37 @@ int _printf(const char *format, ...)
 		case 's':
 			s = va_arg(argList, char *);
 			_puts(s);
-			++len;
+			len = len + _strlen(s);
 			break;
 
 		case 'b':
 			i = va_arg(argList, int);
 			s = fromDeci(i, 2);
-			_puts(s);
-			++len;
+			len = len + _puts(s);
 			break;
 
 		case 'x':
 			i = va_arg(argList, int);
 			s = fromDeci(i, 16);
-			_puts(s);
-			++len;
+			len = len + _puts(s);
 			break;
 
 		case 'X':
 			i = va_arg(argList, int);
 			s = fromDeci(i, 16);
 			string_toupper(s);
-			_puts(s);
-			++len;
+			len = len + _puts(s);
 			break;
 
 		case 'o':
 			i = va_arg(argList, int);
 			s = fromDeci(i, 8);
-			_puts(s);
-			++len;
+			len = len + _puts(s);
 			break;
 
 		case 'u':
 			uint_val = va_arg(argList, unsigned int);
-			print_unsgined_number(uint_val);
-			++len;
+			len = len + print_unsgined_number(uint_val);
 			break;
 
 			/*case 'p':

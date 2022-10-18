@@ -1,14 +1,17 @@
 #include <unistd.h>
 #include "main.h"
 
-void _puts(char *s)
+int _puts(char *s)
 {
 	int i;
+	int len = 0;
 
 	for (i = 0; *(s + i); i++)
 	{
 		_putchar(s[i]);
+		len++;
 	}
+	return (len);
 }
 
 int _putchar(char c)
