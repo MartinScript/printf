@@ -21,6 +21,6 @@ char reVal(int num);
 char *string_toupper(char *str);
 int print_unsgined_number(unsigned int n);
 void print_memory(const void *ptr);
-char *_memcpy(unsigned char *dest, char *src, unsigned int n);
+unsigned char *_memcpy(unsigned char *dest, char *src, unsigned int n);
 
 #endif

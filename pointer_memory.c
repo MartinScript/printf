@@ -1,6 +1,6 @@
 #include "main.h"
 
-char *_memcpy(unsigned char *dest, char *src, unsigned int n)
+/* unsigned char *_memcpy(unsigned char *dest, const  *src, unsigned int n)
 {
 	unsigned int a;
 
@@ -9,3 +9,4 @@ char *_memcpy(unsigned char *dest, char *src, unsigned int n)
 
 	return (dest);
 }
+ */
