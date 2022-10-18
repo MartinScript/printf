@@ -8,10 +8,10 @@ char *int2str(unsigned int number)
 
 	no_of_digits = get_number_of_digits(number);
 
-	number_string = (char *)malloc(sizeof(char) * (no_of_digits + 1)); // +1 for NULL
+	number_string = (char *)malloc(sizeof(char) * (no_of_digits + 1)); /* +1 for NULL */
 	for (i = 0, j = _pow(10, no_of_digits - 1); i < no_of_digits; i++, j /= 10)
 	{
-		number_string[i] = (number / j - (prev * 10)) + 48; // int to ascii
+		number_string[i] = (number / j - (prev * 10)) + 48; /* int to ascii */
 		prev = number / j;
 	}
 	number_string[i] = '\0';

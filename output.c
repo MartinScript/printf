@@ -19,10 +19,11 @@ int _putchar(char c)
 void print_memory(const void *ptr)
 {
 	unsigned char buf[sizeof(ptr)];
+	int i;
 
-	_memcpy(buf, &ptr, sizeof(ptr));
+	_memcpy(buf, ptr, sizeof(ptr));
 
-	for (int i = sizeof(ptr) - 1; i >= 0; i--)
+	for (i = sizeof(ptr) - 1; i >= 0; i--)
 	{
 		unsigned char hi = (buf[i] >> 4) & 0xf;
 		unsigned char lo = buf[i] & 0xf;

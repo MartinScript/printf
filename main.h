@@ -16,11 +16,11 @@ void _puts(char *s);
 int _putchar(char c);
 int _strlen(char *s);
 void strev(char *str);
-char *fromDeci(int inputNum, int base);
+char *fromDeci(unsigned int inputNum, int base);
 char reVal(int num);
 char *string_toupper(char *str);
 int print_unsgined_number(unsigned int n);
 void print_memory(const void *ptr);
-char *_memcpy(char *dest, char *src, unsigned int n);
+char *_memcpy(unsigned char *dest, char *src, unsigned int n);
 
 #endif
