@@ -54,6 +54,7 @@ char *fromDeci(unsigned int inputNum, int base)
  * @n: interger
  * Return: int
  */
+
 int print_unsigned_number(unsigned int n)
 {
 	int div;
