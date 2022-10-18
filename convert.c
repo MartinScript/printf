@@ -1,4 +1,5 @@
 /* C Program to convert decimal to any given base */
+
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
@@ -10,7 +11,7 @@
 /**
  * reVal - convert intergers to character in base 16.
  * @num: number
- * Return- char
+ * Return: char
  */
 char reVal(int num)
 {
