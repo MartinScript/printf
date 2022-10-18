@@ -13,6 +13,7 @@
  * @num: number
  * Return: char
  */
+
 char reVal(int num)
 {
 	if (num >= 0 && num <= 9)
