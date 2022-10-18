@@ -93,11 +93,11 @@ int _printf(const char *format, ...)
 			++len;
 			break;
 
-		case 'p':
-			ptr = va_arg(argList, void *);
-			print_memory(ptr);
-			++len;
-			break;
+			/*case 'p':
+				ptr = va_arg(argList, void *);
+				print_memory(ptr);
+				++len;
+				break;*/
 
 		default:
 			_putchar(*new_str);
