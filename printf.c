@@ -45,6 +45,7 @@ int _printf(const char *format, ...)
 			if (i < 0)
 			{
 				len = len + print_int(i) + 1;
+				break;
 			}
 			len = len + print_int(i);
 			break;
@@ -56,24 +57,44 @@ int _printf(const char *format, ...)
 
 		case 's':
 			s = va_arg(argList, char *);
+			if (s == NULL)
+			{
+				_puts("(null)");
+				break;
+			}
 			_puts(s);
 			len = len + _strlen(s);
 			break;
 
 		case 'b':
 			i = va_arg(argList, int);
+			if (i == 0)
+			{
+				len = len + print_int(i);
+				break;
+			}
 			s = fromDeci(i, 2);
 			len = len + _puts(s);
 			break;
 
 		case 'x':
 			i = va_arg(argList, int);
+			if (i == 0)
+			{
+				len = len + print_int(i);
+				break;
+			}
 			s = fromDeci(i, 16);
 			len = len + _puts(s);
 			break;
 
 		case 'X':
 			i = va_arg(argList, int);
+			if (i == 0)
+			{
+				len = len + print_int(i);
+				break;
+			}
 			s = fromDeci(i, 16);
 			string_to_upper(s);
 			len = len + _puts(s);
@@ -81,6 +102,11 @@ int _printf(const char *format, ...)
 
 		case 'o':
 			i = va_arg(argList, int);
+			if (i == 0)
+			{
+				len = len + print_int(i);
+				break;
+			}
 			s = fromDeci(i, 8);
 			len = len + _puts(s);
 			break;

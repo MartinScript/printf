@@ -11,6 +11,11 @@
 }
  */
 
+/**
+ * printable_character - printable characters (0 < ASCII value < 32 or >= 127)
+ * @s: string
+ * Return: int
+ */
 int printable_character(char *s)
 {
 	int j;
