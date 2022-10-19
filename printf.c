@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	const char *new_str;
-	unsigned int i;
+	int i;
 	char *s;
 	int len = 0;
 	unsigned int uint_val;
