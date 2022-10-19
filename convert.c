@@ -1,5 +1,3 @@
-/* C Program to convert decimal to any given base */
-
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
@@ -8,11 +6,13 @@
 /* To return char for a value. For example '2'*/
 /* is returned for 2. 'A' is returned for 10. 'B' */
 /* for 11*/
+
 /**
  * reVal - convert intergers to character in base 16.
  * @num: number
- * Return - char 
+ * Return: char
  */
+
 char reVal(int num)
 {
 	if (num >= 0 && num <= 9)
@@ -25,8 +25,9 @@ char reVal(int num)
  * fromDeci - Function to convert a given decimal number to a base
  * @inputNum: number
  * @base: base
- * Return - char
+ * Return: char
  */
+
 char *fromDeci(unsigned int inputNum, int base)
 {
 	int index = 0; /* Initialize index of result*/
@@ -46,11 +47,13 @@ char *fromDeci(unsigned int inputNum, int base)
 
 	return (res);
 }
+
 /**
  * print_unsigned_number - function that prints unsigned integer.
  * @n: interger
- * Return - int
+ * Return: int
  */
+
 int print_unsigned_number(unsigned int n)
 {
 	int div;
