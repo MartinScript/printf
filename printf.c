@@ -96,7 +96,7 @@ int _printf(const char *format, ...)
 		case 'S':
 			s = va_arg(argList, char *);
 			while (*s != '\0')
-				if ((int)*s < 32 || (int)*s > 127)
+				if (*s < ' ' || (int)*s > '^?')
 				{
 					_puts("\\x");
 					_printf("0%X", *s);
