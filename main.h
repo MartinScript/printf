@@ -13,6 +13,7 @@ char *int2str(unsigned int n);
 int _pow(int base, int power);
 int get_number_of_digits(unsigned int n);
 int print_int(int n);
+int printable_character(char *s);
 int _puts(char *s);
 int _putchar(char c);
 int _strlen(char *s);

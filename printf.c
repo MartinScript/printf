@@ -95,25 +95,14 @@ int _printf(const char *format, ...)
 
 		case 'S':
 			s = va_arg(argList, char *);
-			while (*s++ != '\0')
-			{
-				if (*s++ < ' ' || *s++ > '~')
-				{
-					_puts("\\x");
-					_printf("0%X", *s++);
-				}
-				else
-				{
-					_putchar(*s++);
-				}
-			}
+			printable_character(s);
 			break;
 
-		case 'p':
+		/*case 'p':
 			ptr = va_arg(argList, void *);
 			print_memory(ptr);
 			++len;
-			break;
+			break;*/
 
 		default:
 			_putchar(*new_str);
