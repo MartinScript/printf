@@ -19,7 +19,8 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-/* void print_memory(const void *ptr)
+/* 
+void print_memory(const void *ptr)
 {	unsigned char buf[sizeof(ptr)];
 	int i;
 
@@ -37,7 +38,7 @@ int _putchar(char c)
 
 		tmp[0] += hi < 10 ? '0' : 'A' - 10;
 		tmp[1] += lo < 10 ? '0' : 'A' - 10;
-
 		write(1, tmp, 2);
 	}
-} */
+}
+*/
