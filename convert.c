@@ -26,8 +26,9 @@ char reVal(int num)
  * fromDeci - Function to convert a given decimal number to a base
  * @inputNum: number
  * @base: base
- * Return - char
+ * Return: char
  */
+
 char *fromDeci(unsigned int inputNum, int base)
 {
 	int index = 0; /* Initialize index of result*/
@@ -47,12 +48,14 @@ char *fromDeci(unsigned int inputNum, int base)
 
 	return (res);
 }
+
 /**
  * print_unsigned_number - function that prints unsigned integer.
  * @n: interger
- * Return - int
+ * Return: int
  */
-int print_unsgined_number(unsigned int n)
+
+int print_unsigned_number(unsigned int n)
 {
 	int div;
 	int len;
