@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdarg.h>
+#include <limits.h>
 /**
  * _printf - a function that formats printing.
  * @format: formatted string.
@@ -9,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	const char *new_str;
-	int i;
+	unsigned int i;
 	char *s;
 	int len = 0;
 	unsigned int uint_val;
@@ -43,11 +44,9 @@ int _printf(const char *format, ...)
 			i = va_arg(argList, int);
 			if (i < 0)
 			{
-				i = -i;
-				_putchar('-');
-				len++;
+				len = len + print_int(i) + 1;
 			}
-			len = len + _puts(int2str(i));
+			len = len + print_int(i);
 			break;
 
 		case '%':

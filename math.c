@@ -26,7 +26,7 @@ int _pow(int base, int power)
  * Return: int
  */
 
-int get_number_of_digits(int n)
+int get_number_of_digits(unsigned int n)
 {
 	int i, count;
 

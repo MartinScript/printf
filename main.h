@@ -12,6 +12,7 @@ int val(char c);
 char *int2str(unsigned int n);
 int _pow(int base, int power);
 int get_number_of_digits(int n);
+int print_int(int n);
 int _puts(char *s);
 int _putchar(char c);
 int _strlen(char *s);

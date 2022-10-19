@@ -29,6 +29,32 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
+/**
+ * @print_int - print integer to output
+ * @n: integer
+ * Return - int
+ */
+
+int print_int(int n)
+{
+	int len, a, bytecount, digit;
+
+	bytecount = 0;
+	if (n < 0)
+		bytecount += _putchar('-');
+	else
+		n = -n;
+	for (len = 1, a = n; a < -9; len *= 10)
+		a /= 10;
+	for (a = n; len != 0; len /= 10)
+	{
+		digit = (a / len) * -1;
+		bytecount += _putchar(digit + '0');
+		a %= len;
+	}
+
+	return (bytecount);
+}
 /* void print_memory(const void *ptr)
 {	unsigned char buf[sizeof(ptr)];
 	int i;
