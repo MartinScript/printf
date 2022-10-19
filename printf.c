@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	char *s;
 	int len = 0;
 	unsigned int uint_val;
-	/*const void *ptr;*/
+	const void *ptr;
 
 	va_list argList;
 	va_start(argList, format);
@@ -73,7 +73,7 @@ int _printf(const char *format, ...)
 		case 'X':
 			i = va_arg(argList, int);
 			s = fromDeci(i, 16);
-			string_toupper(s);
+			string_to_upper(s);
 			len = len + _puts(s);
 			break;
 
@@ -85,14 +85,14 @@ int _printf(const char *format, ...)
 
 		case 'u':
 			uint_val = va_arg(argList, unsigned int);
-			len = len + print_unsgined_number(uint_val);
+			len = len + print_unsigned_number(uint_val);
 			break;
 
-			/*case 'p':
-				ptr = va_arg(argList, void *);
-				print_memory(ptr);
-				++len;
-				break;*/
+		case 'p':
+			ptr = va_arg(argList, void *);
+			print_memory(ptr);
+			++len;
+			break;
 
 		default:
 			_putchar(*new_str);
@@ -100,6 +100,7 @@ int _printf(const char *format, ...)
 			break;
 		}
 	}
+
 	va_end(argList);
 
 	return (len);

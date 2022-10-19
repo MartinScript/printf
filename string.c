@@ -49,7 +49,7 @@ void strev(char *str)
  * Return: char*
  */
 
-char *string_toupper(char *str)
+char *string_to_upper(char *str)
 {
 	int i;
 
