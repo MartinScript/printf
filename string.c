@@ -4,7 +4,7 @@
 /**
  * int2str - convert integer to str
  * @number:
- * Return - char*
+ * Return: char*
  */
 
 char *int2str(unsigned int number)
@@ -27,7 +27,7 @@ char *int2str(unsigned int number)
 /**
  * _strlen - counts string
  * @s: string
- * Return - int
+ * Return: int
  */
 
 int _strlen(char *s)
@@ -45,7 +45,7 @@ int _strlen(char *s)
 /**
  * strev - reverse string
  * @str: function input
- * Return - char*
+ * Return: char*
  */
 
 void strev(char *str)
@@ -64,7 +64,7 @@ void strev(char *str)
 /**
  * string_toupper - converts lowercase to uppercase
  * @str: function input
- * Return - char*
+ * Return: char*
  */
 
 char *string_toupper(char *str)

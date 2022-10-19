@@ -3,7 +3,7 @@
  * _pow - raise a number to the power of another number
  * @base: base
  * @power: power
- * Return - int 
+ * Return: int
  */
 
 int _pow(int base, int power)
@@ -22,13 +22,14 @@ int _pow(int base, int power)
 
 /**
  * get_number_of_digits - Get the number of digits object
- * @n: number to be conted 
- * Return - int 
+ * @n: number to be conted
+ * Return: int
  */
 
 int get_number_of_digits(int n)
 {
 	int i, count;
+
 	for (i = 10, count = 0;; i *= 10, count++)
 	{
 		if ((int)n / i == 0)
@@ -36,5 +37,5 @@ int get_number_of_digits(int n)
 			break;
 		}
 	}
-	return count + 1;
+	return (count + 1);
 }

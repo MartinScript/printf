@@ -3,7 +3,7 @@
 /**
  * _puts - prints string to the output
  * @s: string
- * Return - int
+ * Return: int
  */
 
 int _puts(char *s)
@@ -22,7 +22,7 @@ int _puts(char *s)
 /**
  * _putchar - prints string to the output
  * @c: string
- * Return - int
+ * Return: int
  */
 int _putchar(char c)
 {
