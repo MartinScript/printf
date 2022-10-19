@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * _pow
- * 
- * @param base 
- * @param power 
- * @return int 
+ * _pow - raise a number to the power of another number
+ * @base: base
+ * @power: power
+ * Return - int 
  */
 
 int _pow(int base, int power)
@@ -20,6 +19,12 @@ int _pow(int base, int power)
 		res = res * base;
 	return (res);
 }
+
+/**
+ * get_number_of_digits - Get the number of digits object
+ * @n: number to be conted 
+ * Return - int 
+ */
 
 int get_number_of_digits(int n)
 {
