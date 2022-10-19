@@ -1,5 +1,10 @@
 #include <unistd.h>
 #include "main.h"
+/**
+ * _puts - prints string to the output
+ * @s: string
+ * Return - int
+ */
 
 int _puts(char *s)
 {
@@ -14,6 +19,11 @@ int _puts(char *s)
 	return (len);
 }
 
+/**
+ * _putchar - prints string to the output
+ * @c: string
+ * Return - int
+ */
 int _putchar(char c)
 {
 	return (write(1, &c, 1));

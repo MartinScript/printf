@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+ * int2str - convert integer to str
+ * @number:
+ * Return - char*
+ */
+
 char *int2str(unsigned int number)
 {
 	int no_of_digits, prev = 0, i, j;
@@ -18,11 +24,16 @@ char *int2str(unsigned int number)
 	return (number_string);
 }
 
+/**
+ * _strlen - counts string
+ * @s: string
+ * Return - int
+ */
+
 int _strlen(char *s)
 {
-	int i, sum;
-
-	sum = 0;
+	int i;
+	int sum = 0;
 
 	for (i = 0; *(s + i); i++)
 	{
@@ -31,10 +42,17 @@ int _strlen(char *s)
 	return (sum);
 }
 
+/**
+ * strev - reverse string
+ * @str: function input
+ * Return - char*
+ */
+
 void strev(char *str)
 {
 	int len = _strlen(str);
 	int i;
+
 	for (i = 0; i < len / 2; i++)
 	{
 		char temp = str[i];
@@ -46,7 +64,7 @@ void strev(char *str)
 /**
  * string_toupper - converts lowercase to uppercase
  * @str: function input
- * Return: char*
+ * Return - char*
  */
 
 char *string_toupper(char *str)
