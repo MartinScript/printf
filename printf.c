@@ -88,7 +88,7 @@ int _printf(const char *format, ...)
 
 		case 'u':
 			uint_val = va_arg(argList, unsigned int);
-			len = len + print_unsgined_number(uint_val);
+			len = len + print_unsigined_number(uint_val);
 			break;
 
 		case '\0':
