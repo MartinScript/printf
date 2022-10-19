@@ -93,6 +93,22 @@ int _printf(const char *format, ...)
 		case '\0':
 			return (len);
 
+		case 'S':
+			s = va_arg(argList, char *);
+			while (*s != '\0')
+				if (*s < 32 || *s > 127)
+				{
+					_puts("\\x");
+					_printf("0%X", *s);
+					*s++;
+				}
+				else
+				{
+					_putchar(*s);
+					*s++;
+				}
+			break;
+
 			/*case 'p':
 				ptr = va_arg(argList, void *);
 				print_memory(ptr);
