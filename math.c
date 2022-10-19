@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * _pow
+ * 
+ * @param base 
+ * @param power 
+ * @return int 
+ */
 
 int _pow(int base, int power)
 {
