@@ -95,18 +95,18 @@ int _printf(const char *format, ...)
 
 		case 'S':
 			s = va_arg(argList, char *);
-			while (*s != '\0')
-				if (*s < ' ' || (int)*s > '^?')
+			while (*s++ != '\0')
+			{
+				if (*s++ < ' ' || *s++ > '~')
 				{
 					_puts("\\x");
-					_printf("0%X", *s);
-					*s++;
+					_printf("0%X", *s++);
 				}
 				else
 				{
-					_putchar(*s);
-					*s++;
+					_putchar(*s++);
 				}
+			}
 			break;
 
 			/*case 'p':
