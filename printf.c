@@ -18,6 +18,9 @@ int _printf(const char *format, ...)
 	va_list argList;
 	va_start(argList, format);
 
+	if (format == NULL)
+		return (-1);
+
 	for (new_str = format; *new_str; new_str++)
 	{
 		if (*new_str != '%')
@@ -87,6 +90,9 @@ int _printf(const char *format, ...)
 			uint_val = va_arg(argList, unsigned int);
 			len = len + print_unsgined_number(uint_val);
 			break;
+
+		case '\0':
+			return (len);
 
 			/*case 'p':
 				ptr = va_arg(argList, void *);
