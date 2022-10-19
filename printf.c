@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	char *s;
 	int len = 0;
 	unsigned int uint_val;
-	const void *ptr;
+	/* const void *ptr;*/
 
 	va_list argList;
 	va_start(argList, format);
@@ -95,14 +95,14 @@ int _printf(const char *format, ...)
 
 		case 'S':
 			s = va_arg(argList, char *);
-			printable_character(s);
+			len = len + printable_character(s);
 			break;
 
-		/*case 'p':
-			ptr = va_arg(argList, void *);
-			print_memory(ptr);
-			++len;
-			break;*/
+			/*case 'p':
+				ptr = va_arg(argList, void *);
+				print_memory(ptr);
+				++len;
+				break;*/
 
 		default:
 			_putchar(*new_str);

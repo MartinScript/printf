@@ -14,17 +14,18 @@
 int printable_character(char *s)
 {
 	int j;
+	int len;
 
 	for (j = 0; s[j] != '\0'; j++)
 	{
 		if (s[j] < ' ' || s[j] > '~')
 		{
-			_puts("\\x");
-			_printf("0%X", s[j]);
+			len = len + _printf("\\x0%X", s[j]);
 		}
 		else
 		{
-			_putchar(s[j]);
+			len = len + _putchar(s[j]);
 		}
 	}
+	return (len);
 }

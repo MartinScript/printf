@@ -21,7 +21,7 @@ void strev(char *str);
 char *fromDeci(unsigned int inputNum, int base);
 char reVal(int num);
 char *string_to_upper(char *str);
-int print_unsgined_number(unsigned int n);
+int print_unsigned_number(unsigned int n);
 void print_memory(const void *ptr);
 unsigned char *_memcpy(unsigned char *dest, char *src, unsigned int n);
 
